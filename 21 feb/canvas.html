@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+
+</head>
+
+<body>
+    <canvas id="canvas1" width="200" height="100" style="border: 2px solid black;">
+        Your Browser not Support HTML Canvas</canvas><br><br>
+
+    <canvas id="canvas2" width="200" height="100" style="border: 2px solid black;">
+    Your Browser not Support HTML Canvas</canvas><br><br>
+
+    <canvas id="canvas3" width="200" height="100" style="border: 2px solid black;">
+    Your Browser not Support HTML Canvas</canvas><br><br>
+
+    <canvas id="canvas4" width="200" height="100" style="border: 2px solid black;">
+    Your Browser not Support HTML Canvas</canvas><br><br>
+
+    <canvas id="canvas5" width="200" height="100" style="border: 2px solid black;">
+    Your Browser not Support HTML Canvas</canvas><br><br>
+
+    <canvas id="canvas6" width="200" height="100" style="border: 2px solid black;">
+        Your Browser not Support HTML Canvas</canvas>
+
+    <script>
+        let canvas2 = document.getElementById("canvas2");
+        let can2 = canvas2.getContext("2d");
+        can2.moveTo(0, 0);
+        can2.lineTo(200, 100);
+        can2.stroke();
+
+        let canvas3 = document.getElementById("canvas3");
+        let can3 = canvas3.getContext("2d");
+        can3.beginPath();
+        can3.arc(95, 50, 40, 0, 2 * Math.PI);
+        can3.stroke();
+
+        let canvas4 = document.getElementById("canvas4");
+        let can4 = canvas4.getContext("2d");
+        can4.font = "30px Arial";
+        can4.fillText("Ghanshyam", 10, 50);
+
+        let canvas5 = document.getElementById("canvas5");
+        let can5 = canvas5.getContext("2d");
+        can5.font = "30px Arial";
+        can5.strokeText("Ghanshyam", 10, 50);
+
+        let canvas6 = document.getElementById("canvas6");
+        var can6 = canvas6.getContext("2d");
+        can6.fillStyle = "#FF0000";
+        can6.fillRect(0, 0, 150, 75);
+    </script>
+
+</body>
+
+</html>
