@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>positive-negetive</title>
+</head>
+<body>
+    <center>
+    Enter Number for check:
+    <input type="text" placeholder="enter number for check" id="num" name="num"><br><br>
+     <input type="button" value="submit" id="btn1" onclick="positivenegetive()" />
+    </center>
+     <script>
+        function positivenegetive(){
+            let x= parseInt(document.getElementById("num").value);
+            if(x>0){
+                window.alert(x + " is positive number....");
+            }
+            else if(x<0){
+                
+                window.alert(x + " is negetive number...");
+            }
+            else{
+                window.alert(" you entered zero....");
+            }
+        } 
+
+    </script>
+    
+</body>
+</html>

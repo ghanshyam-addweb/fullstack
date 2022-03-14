@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Larger Number</title>
+</head>
+<body>
+    <center>
+        Enter Number1: <input type="text" id="num1" name="num1" placeholder="enter first number" /><br><br>
+        Enter Number2: <input type="text" id="num2" name="num2" placeholder="enter second number" /><br><br>
+        <input type="button" value="Submit" id="btn1" onclick="checklarger()" />
+ 
+    </center>
+    
+    <script>
+        function checklarger(){
+            let x = parseInt(document.getElementById("num1").value);
+            let y = parseInt(document.getElementById("num2").value);
+            if (x > y) {
+                alert(x + " is larger number.");
+            }
+            else if(x==y){
+                alert(" both numbers are same, please enter different numbers.");
+            }
+                
+            else{
+                alert( y + " is larger number.");
+            }
+        }
+    </script>
+
+</body>
+</html>
