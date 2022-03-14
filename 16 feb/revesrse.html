@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse num using while loop</title>
+
+</head>
+<body>
+
+    <input type="text" name="num" id="num" placeholder="enter number" /><br><br>
+    <input type="button" name="btn" value="check reverse" id="btn" onclick="showreverse()" /><br><br>
+
+    <script>
+
+        function showreverse(){
+            let num = parseInt(document.getElementById("num").value);
+            var rev = 0;
+            var reminder;
+            while(num != 0){
+                reminder = num % 10;
+                // console.log("reminder = " + reminder);
+                rev = rev * 10 + reminder;
+                // console.log("rev = "+ rev);
+                num = Math.floor(num / 10);
+                // console.log("new num ="+ num);
+            }
+            document.write(rev);
+        }
+    </script>
+    
+</body>
+</html>

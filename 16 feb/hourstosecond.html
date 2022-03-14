@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hours minutes and seconds into second</title>
+</head>
+<body>
+    Hours :
+    <input type="text" name="hour" id="hour" placeholder="enter hours" /><br><br>
+    Minutes : 
+    <input type="text" name="minutes" id="minutes" placeholder="enter minutes" /><br><br>
+    Seconds : 
+    <input type="text" name="seconds" id="seconds" placeholder="enter seconds" /><br><br>
+    <input type="button" value="check" name="btn1" id="btn" onclick="showseconds()" /><br><br>
+
+    <script>
+        function showseconds(){
+
+            let hours = parseInt(document.getElementById("hour").value);
+            let minutes = parseInt(document.getElementById("minutes").value);
+            let seconds = parseInt(document.getElementById("seconds").value);
+
+            let totalseconds = seconds + ( hours * 3600 ) + ( minutes * 60);
+            
+            alert("Total seconds is =" + totalseconds);
+        }
+
+    </script>
+
+</body>
+</html>

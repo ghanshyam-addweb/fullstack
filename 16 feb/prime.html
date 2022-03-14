@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prime</title>
+</head>
+<body>
+    <input type="text"  id="num" name="num" />
+    <input type="button" name="submit" value="submit" id="btn1" onclick="test_prime()" />
+    <script>
+    let n = parseInt(document.getElementById("num").value);
+    // console.log(n);
+    function test_prime(){
+        
+        if (n===1)
+        {
+            alert("enter number grater than 1");
+        }
+        else if(n === 2)
+        {
+            alert("2 is prime");
+            }
+        else
+        {
+            for(let x = 2; x < n; x++)
+            {
+                if(n % x === 0)
+                {
+                    alert("not prime");
+                }
+                else{
+                    console.log(n);
+                    alert("prime");
+                }
+            }
+            // alert("it's prime")
+        }
+    }
+
+
+
+</script>
+
+</body>
+</html>

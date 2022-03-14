@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes of rupee</title>
+</head>
+<body>
+
+    <input type="text" name="amount" id="amount" placeholder="enter amount"  />
+    <input type="button" name="btn" value="check notes" onclick="shownotes()" id="btn">
+
+
+
+    <script>
+
+        function shownotes(){
+
+            var amount = parseInt(document.getElementById("amount").value);
+            // var hun, fif, twe, ten , fiv, two ;
+            
+
+            while(amount >= 100){
+               let hun = Math.floor(amount / 100);
+                amount = amount % 100;
+                document.write("number of notes of hundred =" + hun);
+            }
+            while(amount >= 50){
+                let fif = Math.floor(amount / 50);
+                amount = amount % 50;
+                document.write("<br>number of notes of 50 is =" + fif);
+            }
+            while(amount >= 20){
+                let fif = Math.floor(amount / 20);
+                amount = amount % 20;
+                document.write("<br>number of notes of 20 is =" + fif);
+            }
+            while(amount >= 10){
+                let fif = Math.floor(amount / 10);
+                amount = amount % 10;
+                document.write("<br>number of notes of 10 is =" + fif);
+            }
+            while(amount >= 5){
+                let fif = Math.floor(amount / 5);
+                amount = amount % 5;
+                document.write("<br>number of notes of 5 is =" + fif);
+            }
+            while(amount >= 2){
+                let fif = Math.floor(amount / 2);
+                amount = amount % 2;
+                document.write("<br>number of notes of 2 is =" + fif);
+            }
+        }
+        
+    </script>
+</body>
+</html>
