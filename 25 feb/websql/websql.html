@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSql</title>
+</head>
+
+<body>
+    <div id="websql" name="websql">Status Message</div>
+    <script>
+        let database = openDatabase("mydb", "1.0", "Web SQL", 2 * 1024 * 1024);
+        let message;
+
+        database.transaction(function(data) {
+            data.executeSql(
+                "CREATE TABLE DATA(id unique, name, address)"
+            );
+            data.executeSql(
+                'INSERT INTO DATA (id, name, address, number) VALUES (1, "Ghanshyam Pandya", "Wav", 9879465857 )');
+            data.executeSql(
+                'INSERT INTO DATA (id, name, address, number) VALUES (2, "Shailesh Pandya", "Rapar", 7841538462)');
+
+            message = "<p>mydb Created and data Inserted</p>";
+
+            document.getElementById("websql").innerHTML = message;
+        });
+
+        database.transaction(function(database) {
+            database.executeSql("SELECT * FROM DATA", [],
+                function(database, results) {
+                    let len = results.rows.length;
+                    message = "<p>Found Rows : " + len + "</p>";
+                    document.getElementById("websql").innerHTML += message;
+
+                    for (let i = 0; i < len; i++) {
+                        msg = "<p><b>" + results.rows.item(i).name + "</b></p>";
+                        document.getElementById("websql").innerHTML += message;
+                    }
+                },
+                null
+            );
+        });
+    </script>
+
+</body>
+
+</html>
