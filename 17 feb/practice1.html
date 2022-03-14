@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic practice</title>
+</head>
+
+<body>
+
+    <input type="text" name="num1" id="num1" placeholder="input num1 for arithmetic operation" /> <br><br>
+    <input type="text" name="num2" id="num2" placeholder="input num2 for arithmetic operation" /><br><br>
+
+    <input type="button" name="btn" id="btn" value="Addition" onclick="sum()" />
+    <input type="button" name="btn2" id="btn2" value="subtraction" onclick="sub()" />
+    <input type="button" name="btn3" id="btn3" value="multiplicatoin" onclick="multi()" />
+    <input type="button" name="btn4" id="btn4" value="divide" onclick="divide()" />
+    <input type="button" name="btn5" id="btn5" value="modulo" onclick="modulo()" />
+    <input type="button" name="btn6" id="btn6" value="incriment" onclick="inc()" />
+    <input type="button" name="btn7" id="btn7" value="decrement" onclick="dicr()" />
+
+    <script>
+        // var x = parseInt(document.getElementById("num1").value);
+        // var y = parseInt(document.getElementById("num2").value);
+        // // console.log(x);
+        // // console.log(y);
+
+        function sum() {
+            var x = parseInt(document.getElementById("num1").value);
+            var y = parseInt(document.getElementById("num2").value);
+            // console.log(x);
+            var z = x + y;
+            document.write(z);
+        }
+
+        function sub() {
+            var x = parseInt(document.getElementById("num1").value);
+            var y = parseInt(document.getElementById("num2").value);
+            // console.log(x);
+            var z = x - y;
+            document.write(z);
+        }
+
+        function multi() {
+            var x = parseInt(document.getElementById("num1").value);
+            var y = parseInt(document.getElementById("num2").value);
+            // console.log(x);
+            var z = x * y;
+            document.write(z);
+        }
+
+        function divide() {
+            var x = parseInt(document.getElementById("num1").value);
+            var y = parseInt(document.getElementById("num2").value);
+            // console.log(x);
+            var z = x / y;
+            document.write(z);
+        }
+
+        function modulo() {
+            var x = parseInt(document.getElementById("num1").value);
+            var y = parseInt(document.getElementById("num2").value);
+            // console.log(x);
+            var z = x % y;
+            document.write(z);
+        }
+
+        function inc() {
+            var x = parseInt(document.getElementById("num1").value);
+            var y = parseInt(document.getElementById("num2").value);
+            // console.log(x);
+            x++;
+            y++;
+
+            document.write(x + "<br>");
+            document.write(y);
+        }
+
+        function dicr() {
+            var x = parseInt(document.getElementById("num1").value);
+            var y = parseInt(document.getElementById("num2").value);
+            x--;
+            y--;
+            document.write(x + "<br>");
+            document.write(y);
+        }
+    </script>
+
+
+
+</body>
+
+</html>
