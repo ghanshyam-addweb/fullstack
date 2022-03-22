@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Pattern</title>
+</head>
+<!-- <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Canvas Patterns</title>
+</head>
+
+<body>
+    <img srs="canvaspattern.jpg" id="img" name="img" height="100px" width="100px" />
+    <p>Canvas:</p>
+    <canvas id="Canvas" width="450" height="450"></canvas>
+    <script>
+        function canvaspattern(direction) {
+            var cnvas = document.getElementById("Canvas");
+            var ctx = cnvas.getContext("2d ");
+            ctx.clearRect(0, 0, cnvas.width, cnvas.height);
+            var img = document.getElementById("img");
+            var pattern = ctx.createPattern(img, direction);
+            ctx.fillStyle = pattern;
+            ctx.fill();
+        }
+        canvaspattern('repeat');
+        canvaspattern('repeat - x');
+        canvaspattern('repeat-y');
+        canvaspattern('repeat - y');
+    </script>
+</body> -->
+
+
+
+
+<body>
+
+
+    <p>Image to use:</p>
+    <img src="canvaspattern.jpg" id="lamp" width="32" height="32">
+    <p>Canvas:</p>
+    <canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+    <br><br>
+
+    <button onclick="draw('repeat')">Repeat</button>
+    <button onclick="draw('repeat-x')">Repeat-x</button>
+    <button onclick="draw('repeat-y')">Repeat-y</button>
+    <button onclick="draw('no-repeat')">No-repeat</button>
+
+    <script>
+        function draw(direction) {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.clearRect(0, 0, c.width, c.height);
+            var img = document.getElementById("lamp")
+            var pat = ctx.createPattern(img, direction);
+            ctx.rect(0, 0, 150, 100);
+            ctx.fillStyle = pat;
+            ctx.fill();
+        }
+    </script>
+
+</body>
+
+</html>
