@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMILY :)</title>
+</head>
+
+<body style="text-align: center;">
+
+    <canvas id="smily" width="650" height="450"></canvas>
+    <script>
+        let canvas = document.getElementById("smily");
+        let smile = canvas.getContext("2d");
+
+        smile.fillStyle = "yellow";
+        smile.strokeStyle = "black";
+
+        smile.beginPath();
+        smile.arc(320, 240, 200, 0, 2 * Math.PI);
+        smile.fill();
+        smile.stroke();
+        smile.closePath();
+
+        smile.fillStyle = "black";
+
+        smile.beginPath();
+        smile.arc(270, 175, 30, 0, 2 * Math.PI);
+        smile.fill();
+        smile.stroke();
+        smile.closePath();
+
+        smile.beginPath();
+        smile.arc(370, 175, 30, 0, 2 * Math.PI);
+        smile.fill();
+        smile.stroke();
+        smile.closePath();
+
+        smile.fillStyle = "yellow";
+
+        smile.beginPath();
+        smile.arc(320, 240, 150, 0, -1 * Math.PI);
+        smile.fill();
+        smile.stroke();
+        smile.closePath();
+
+        // smile.fillStyle = "red";
+
+        // smile.beginPath();
+        // smile.arc(330, 350, 80, 0, 1 * Math.PI);
+        // smile.fill();
+        // smile.stroke();
+        // smile.closePath();
+    </script>
+</body>
+
+</html>
