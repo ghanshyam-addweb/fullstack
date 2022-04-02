@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascending sort of array</title>
+</head>
+
+<body>
+    <script>
+        // const num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        let num = [25, 56, 85, 78, 10, 52, 73, 5, 58, 60, 25]
+
+        let sorted = num.sort(function(a, b) {
+            return a - b
+        });
+
+        document.write("sorted array = " + sorted);
+
+        console.log(sorted);
+    </script>
+
+</body>
+
+</html>

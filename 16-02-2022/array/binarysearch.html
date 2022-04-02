@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary search array</title>
+</head>
+
+<body>
+    <script>
+        // const num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        let num = [25, 56, 85, 78, 10, 52, 73, 5, 58, 60, 25];
+
+        function binary_search(num, value) {
+            let start = 0;
+            let end = num.length - 1;
+
+            // console.log(mid);
+            while (start <= end) {
+                let mid = Math.floor((start + end) / 2);
+                if (num[mid] == value) {
+                    return num[mid];
+                } else if (value > num[mid]) {
+                    low = mid + 1;
+                } else {
+                    high = mid - 1;
+                }
+            }
+            return -1;
+        }
+
+        let sorted = num.sort(function(a, b) {
+            return a - b
+        });
+
+        console.log(sorted);
+
+        let search = binary_search(sorted, 52);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loss-Profit</title>
+</head>
+<body>
+    cost price: <br>
+    <input type="text" id="cost" name="cost" placeholder="enter cost price" /><br><br>
+    selling price: <br>
+    <input type="text" name="" id="sell" placeholder="enter selling price" /><br><br>
+    <input type="button" name="btn1" id="btn" value="submit" onclick="showresult()" /><br><br>
+
+
+    <script>
+        function showresult(){
+            let cost = parseInt(document.getElementById("cost").value);
+            let sell = parseInt(document.getElementById("sell").value);
+
+            if(cost == sell){
+                alert("no profit and no loss")
+            }
+            else if(cost > sell){
+                loss = cost - sell;
+                alert("aww...you'r having loss of.." + loss );
+            }
+            else{
+                profit = sell - cost;
+                alert("great..you are having profit of " + profit);
+        }
+        }
+    </script>
+</body>
+</html>
