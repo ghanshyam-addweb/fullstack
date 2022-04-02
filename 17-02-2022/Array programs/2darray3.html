@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2d array sum of columns</title>
+</head>
+
+<body>
+    <script>
+        // Get the size m and n
+        var m = 4;
+        var n = 4;
+
+
+
+
+        function column_sum(arr) {
+
+            var i, j, sum = 0;
+
+            document.write("<br>" + "Finding Sum of each column:" + "<br>");
+
+            // finding the column sum
+            for (i = 0; i < m; ++i) {
+                for (j = 0; j < n; ++j) {
+
+                    // Add the element
+                    sum = sum + arr[j][i];
+                }
+
+                // Print the column sum
+                document.write("Sum of the column " +
+                    i + " = " + sum +
+                    "<br>");
+
+                // Reset the sum
+                sum = 0;
+            }
+        }
+
+
+        var i, j;
+        var arr = new Array(m).fill(0);
+        for (var k = 0; k < m; k++) {
+            arr[k] = new Array(n).fill(0);
+        }
+
+        // Get the matrix elements
+        var x = 1;
+        for (i = 0; i < m; i++)
+            for (j = 0; j < n; j++)
+                arr[i][j] = x++;
+
+        // Get each column sum
+        column_sum(arr);
+    </script>
+
+</body>
+
+</html>

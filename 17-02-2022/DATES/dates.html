@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Dates method</title>
+</head>
+
+<body>
+    <script>
+        const d = new Date();
+        document.write(d);
+        document.write("<br>");
+        document.write(d.getFullYear());
+        document.write("<br>");
+        document.write(d.getMonth());
+        document.write("<br>");
+        document.write(d.getDate());
+        document.write("<br>");
+        document.write(d.getHours());
+        document.write("<br>");
+        document.write(d.getMinutes());
+        document.write("<br>");
+        document.write(d.getSeconds());
+        document.write("<br>");
+        document.write(d.getMilliseconds());
+        document.write("<br>");
+        document.write(d.getTime());
+        document.write("<br>");
+        document.write(d.getDay());
+        document.write("<br>");
+        document.write(Date.now());
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+
+
+
+        //UTC date methods
+
+        document.write("UTC date methods");
+        document.write("<br>");
+        document.write(d.getUTCDate());
+        document.write("<br>");
+        document.write(d.getUTCDay());
+        document.write("<br>");
+        document.write(d.getUTCFullYear());
+        document.write("<br>");
+        document.write(d.getUTCHours());
+        document.write("<br>");
+        document.write(d.getUTCMilliseconds());
+        document.write("<br>");
+        document.write(d.getUTCMinutes());
+        document.write("<br>");
+        document.write(d.getUTCMonth());
+        document.write("<br>");
+        document.write(d.getUTCSeconds());
+        document.write("<br>");
+
+
+        //set date methods
+
+        document.write("set date methods");
+        document.write("<br>");
+        document.write(d.setFullYear(2019), d);
+        document.write("<br>");
+        document.write(d.setFullYear(2010));
+        document.write("<br>");
+        document.write(d.setHours(23), d);
+        document.write("<br>");
+        document.write(d.setMilliseconds(200));
+        document.write("<br>");
+        document.write(d.setMinutes(60), d);
+        document.write("<br>");
+        // document.write(d.setMonth(0), d);
+        // document.write("<br>");
+        document.write(d.setMinutes(60), d);
+        document.write("<br>");
+        // document.write(d.setTime());
+        document.write("<br>");
+    </script>
+</body>
+
+</html>

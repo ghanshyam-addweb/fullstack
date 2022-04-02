@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object literals</title>
+    <script>
+        let n = "student";
+        var obj = {
+            [n + "name"]: "ghansyam pandya",
+            course: "B.tech",
+            details: function() {
+                return `${this.studentname} is student of ${this.course}`
+
+            }
+
+        };
+        console.log(obj);
+        console.log(obj.details());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
